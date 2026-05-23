@@ -3,67 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Etch a Sketch</title>
+  <title>Etch a Sketch | Drawing Pad</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="logo">🎨 Etch a Sketch</h1>
+      <p class="tagline">Hover to draw • Random colors • Resize anytime</p>
+    </header>
 
-  <button class="btn js-btn">Size of Grid</button>
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-primary js-btn">
+        <span>📐</span> Resize Grid
+      </button>
+      <button class="btn btn-secondary js-clear">
+        <span>🗑️</span> Clear Canvas
+      </button>
+      <div class="size-indicator">
+        <span class="size-label">Current Grid:</span>
+        <span class="size-value js-size">16 x 16</span>
+      </div>
+    </div>
 
-  <div class="container">
+    <!-- Drawing Container -->
+    <div class="container js-container"></div>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <p>The Odin Project • Etch a Sketch</p>
+    </footer>
   </div>
-  
-<script>
 
-  const cont = document.querySelector('.container');
-  const btn = document.querySelector('.js-btn');
-
-  createBoxes(16);
-
-  function createBoxes(noOfGrid) {
-
-    const totalSize = noOfGrid * noOfGrid;
- 
-    for(let i = 1; i <= totalSize; i++) {
-
-      const box = document.createElement('div');
-      box.addEventListener('mouseenter', () => {
-        if(!box.style.backgroundColor)
-        box.style.backgroundColor = `rgb(${randomNo()}, ${randomNo()}, ${randomNo()})`;
-      });
-      box.classList.add('square-box');
-      box.style.width = `calc(${100 / noOfGrid}%)`;
-      box.style.height = `calc(${100 / noOfGrid}vh)`;
-      cont.appendChild(box);
-
-    }
-
-  }
-
-  function removeBoxes() {
-    const squareBox = document.querySelectorAll('.square-box');
-
-    for(const box of squareBox) {
-      box.remove();
-    }
-
-  }
-
-  function randomNo() {
-    return Math.floor((Math.random() * 255) + 1);
-  }
-
-  btn.addEventListener('click', () => {
-    let noOfGrid;
-    do {
-      noOfGrid = prompt("Enter your desired squares per side (less than 100):");
-    } while(Number(noOfGrid) > 100);
-    removeBoxes();
-    createBoxes(noOfGrid);
-  });
-
-
-</script>  
+  <script src="script.js"></script>
 </body>
 </html>
