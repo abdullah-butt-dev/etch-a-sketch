@@ -1,19 +1,19 @@
-# Etch-a-Sketch
+# 🎨 Etch a Sketch
 
-A browser-based drawing grid built for the **Odin Project** foundations curriculum.
+![Etch a Sketch Banner](https://placehold.co/1200x400/10b981/white?text=Etch+a+Sketch+Digital+Drawing+Pad&font=poppins)
 
-## Features
+> A beautiful browser-based drawing grid with random colors and dynamic resizing. Built for The Odin Project foundations curriculum.
 
-- Choose the number of squares per side (up to 100).
+## 🌐 Live Preview
 
-- Random color change by hovering the mouse over the grid.
+**[🎯 Try it Live](https://abdullah-butt-dev.github.io/etch-a-sketch/)**
 
-- Resize the grid at any time.
+## ✨ Features
 
-## Built With
-
-- HTML
-
-- CSS
-
-- JavaScript
+- 🖌️ **Hover to Draw** - Move mouse over grid to create colorful art
+- 🎨 **Random Colors** - Each square gets a unique random RGB color
+- 📐 **Adjustable Grid** - Choose grid size from 1x1 up to 100x100
+- 🧹 **Clear Canvas** - One-click button to start fresh
+- 📱 **Fully Responsive** - Works beautifully on all devices
+- 🎯 **Smooth Animations** - Professional hover effects and transitions
+- 🌈 **Gradient Design** - Modern purple/pink gradient theme
